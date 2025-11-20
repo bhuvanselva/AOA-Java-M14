@@ -21,9 +21,13 @@ Constraints:
 1 <= n <= 10^6
 ## Algorithm
 1.Input Reading: Read the number of solar panels n and their corresponding energy values into an integer array energy[].
+
 2.Total Energy Calculation: Compute the total sum of all energy values, as it will be used to determine the circular subarray case.
+
 3.Find Maximum Subarray Sum (Non-Circular Case): Use Kadane’s Algorithm to find the maximum subarray sum (maxSum) — representing the best energy output without wrapping around.
+
 4.Find Minimum Subarray Sum (To Handle Circular Case): Use a modified Kadane’s Algorithm to find the minimum subarray sum (minSum). The maximum circular energy can then be calculated as wrappedDifference = totalSum - minSum.
+
 5.Determine Final Maximum Energy: If all values are negative, return maxSum (since wrapping gives no benefit). Otherwise, return the maximum of maxSum and wrappedDifference.
 
 
